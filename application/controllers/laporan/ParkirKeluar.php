@@ -21,6 +21,7 @@ class ParkirKeluar extends CI_Controller
 			'title' => 'laporan Parkir Keluar hari ini',
 			'page'  => 'Laporan Parkir Hari ini',
 			'small' => 'laporan Kasir Parkir',
+			'secontitle'=> 'Laporan Per Tanggal',
 			'urls'  => '<li class="active">Parkir report</li>',
 			'entry'  => $this->Mentry->getall(),
 			'exitoneday'  => $this->MlapParkirKeluar->getallOneDay(),
@@ -28,6 +29,14 @@ class ParkirKeluar extends CI_Controller
 			'signatureKey'  => $strurl['value'],
 		];
 		$this->template->display('gate/parkirlaporan/index', $data);
+	}
+
+	public function TabelPeriode()
+	{
+		$param = $this->input->post(null, TRUE);
+		$data['$exitGroup'] = $this->MlapParkirKeluar->getGroub($param);
+
+		$this->load->view('Absens/parkirlaporan/tabel', $data);
 	}
 	
 }

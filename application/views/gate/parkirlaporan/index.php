@@ -75,6 +75,7 @@
 			<div class="box-header">
 				<h3 class="box-title"><i class="fa fa-letter"></i> <?= $page ?></h3>
 				<?= $this->session->flashdata('pesan'); ?>
+
 			</div>
 			<div class="box-body">
 				<div class="row">
@@ -108,7 +109,7 @@
 										?>
 											<tr>
 												<td><?= $data['jenis_kendaraan']; ?></td>
-												<td><?=  'Rp. ' . rupiah($data['harga_bayar']); ?></td>
+												<td><?= 'Rp. ' . rupiah($data['harga_bayar']); ?></td>
 												<td><?= $data['jumlah_kendaraan']; ?></td>
 												<td><?= 'Rp. ' . rupiah($data['jumlah_transakasi']); ?></td>
 											</tr>
@@ -121,7 +122,7 @@
 										<tr>
 											<th colspan="2">Total</th>
 											<th><?= $totalkendaran; ?></th>
-											<th><?= 'Rp. '.rupiah($totaltrx); ?></th>
+											<th><?= 'Rp. ' . rupiah($totaltrx); ?></th>
 											<th></th>
 
 										</tr>
@@ -139,8 +140,37 @@
 	<div class="col-md-12">
 		<div class="box box-info">
 			<div class="box-header">
-				<h3 class="box-title"><i class="fa fa-letter"></i> <?= $small ?></h3>
+				<h3 class="box-title"><i class="fa fa-letter"></i> <?= $secontitle ?></h3>
 				<?= $this->session->flashdata('pesan'); ?>
+				<div class="row">
+					<div class="col-xs-8"></div>
+					<div class="col-xs-2">
+						<div class="form-group">
+							<label>Tanggal Awal</label>
+							<div class="input-group date">
+
+								<input type="text" onchange="IsiTabel()" class="form-control pull-right datepicker35" value="<?= date('m/d/Y') ?>" id="datepicker35">
+								<div class="input-group-addon">
+									<i class="fa fa-calendar"></i>
+								</div>
+							</div>
+							<!-- /.input group -->
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<div class="form-group">
+							<label>Date Akhir</label>
+							<div class="input-group date">
+								<div class="input-group-addon">
+									<i class="fa fa-calendar"></i>
+								</div>
+								<input type="text" onchange="IsiTabel()" class="form-control pull-right datepicker36" value="<?= date('m/d/Y') ?>" id="datepicker36">
+							</div>
+							<!-- /.input group -->
+						</div>
+						<!-- /.form group -->
+					</div>
+				</div>
 			</div>
 			<div class="box-body">
 				<div class="row">
@@ -149,43 +179,24 @@
 							<div class="box-header with-border">
 								<!-- <button class="btn bg-olive cetakinikeluar"><i class="icon-printer"></i> Cetak</button> -->
 							</div>
+
 							<table class="table table-bordered table-striped data-tabel">
 								<thead>
 									<tr>
-										<th class="text-center">No.</th>
-										<th>Nomor Plat</th>
-										<th>Nomor Tiket</th>
 										<th>Jenis Kendaraan</th>
-										<th>Harga Bayar</th>
-										<th>Jam Masuk</th>
-										<th>Metode Bayar</th>
-										<th>Keterangan</th>
-										<!-- <th class="text-center">Aksi</th> -->
+										<th>Tarif</th>
+										<th>Jumlah Kendaraan</th>
+										<th>Jumlah Transaksi</th>
+										<th class="text-center">Aksi</th>
 									</tr>
 								</thead>
-								<tbody>
-									<?php
-									$n = 0;
-									foreach ($exitoneday as $data) {
-										$n++;
-									?>
+								<div class="isiTabel">
 
-										<tr>
-											<td><?= $n; ?> .</td>
-											<td><?= $data['noplat']; ?></td>
-											<td><?= $data['id_Entry']; ?></td>
-											<td><?= $data['jenis_kendaraan']; ?></td>
-											<td><?=  'Rp. ' . rupiah($data['harga_bayar']); ?></td>
-											<td><?= $data['date_exit']; ?></td>
-											<td><?= $data['jenis_bayar']; ?></td>
-											<td><?= $data['keterangan']; ?></td>
-											<!-- <td><?= $data['keterangan']; ?></td> -->
-										</tr>
-									<?php
-									}
-									?>
-								</tbody>
+								</div>
 							</table>
+
+
+
 						</div>
 					</div>
 				</div>
@@ -196,3 +207,32 @@
 
 </div>
 </div>
+<script>
+	$(function() {
+		$('.data-tabel23').DataTable({
+			'ordering': false,
+		});
+
+		//Date picker
+		$('#datepicker35').datepicker({
+			autoclose: true
+		})
+		$('#datepicker36').datepicker({
+			autoclose: true
+		})
+	})
+	IsiTabel();
+
+	function IsiTabel() {
+		$.ajax({
+			type: "post",
+			url: "<?= site_url('laporan/ParkirKeluar/TabelPeriode') ?>",
+			data: "&awal=" + $('.datepicker35').val() + "&akhir=" + $('.datepicker36').val(),
+			cache: false,
+			success: function(data) {
+				$('.isiTabel').html(data);
+
+			}
+		});
+	}
+</script>
