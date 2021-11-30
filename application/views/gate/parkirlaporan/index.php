@@ -136,7 +136,7 @@
 										<th>Nomor Tiket</th>
 										<th>Jenis Kendaraan</th>
 										<th>Harga Bayar</th>
-										<th>jam Masuk</th>
+										<th>Jam Masuk</th>
 										<th>Metode Bayar</th>
 										<th>Keterangan</th>
 										<th class="text-center">Aksi</th>
