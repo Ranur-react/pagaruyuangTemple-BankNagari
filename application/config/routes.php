@@ -24,7 +24,8 @@ $route['qrisloading'] = 'gate/Parkir/qrisApi_waiting';
 $route['qrisapi'] = 'gate/Parkir/POST_QRIS';
 $route['qrisapiGetstatus'] = 'gate/Parkir/GET_QRIS';
 $route['bayar'] = 'gate/Parkir/bayar';
-$route['Laporan'] = 'gate/Parkir';
+
+$route['LaporanKini'] = 'laporan/ParkirKeluar';
 
 $route['Print'] = 'gate/PrintESC';
 
