@@ -334,16 +334,16 @@ function printStruk() {
             //         },
             //         complete:function(response) {
 			// 			console.log("Cetak Struk Selesai..YY...");	
-			// 		if (database['jenis']=='roda2') {
+					if (database['jenis']=='roda2') {
 			
-			// 		OpenMotor();
+					OpenMotor();
 
-			// 		}else{
-			// 		// OpenMotor();
+					}else{
+					// OpenMotor();
 
-			// 		OpenMobil()
+					OpenMobil()
 					
-			// 		}
+					}
 			// }
             //     });
 }
