@@ -323,29 +323,29 @@ function OpenMotor() {
 }
 function printStruk() {
 
-	              $.ajax({
-                    url: 'http://localhost/Web-Services/Print',
-                    data: {jsonData: JSON.stringify(database)},
-                    type: "post",
-			        dataType: "json",
-                    cache: false,
-                    success: function(response) {
-                    	alert
-                    },
-                    complete:function(response) {
-						console.log("Cetak Struk Selesai..YY...");	
-					if (database['jenis']=='roda2') {
+	        //       $.ajax({
+            //         url: 'http://localhost/Web-Services/Print',
+            //         data: {jsonData: JSON.stringify(database)},
+            //         type: "post",
+			//         dataType: "json",
+            //         cache: false,
+            //         success: function(response) {
+            //         	alert
+            //         },
+            //         complete:function(response) {
+			// 			console.log("Cetak Struk Selesai..YY...");	
+			// 		if (database['jenis']=='roda2') {
 			
-					OpenMotor();
+			// 		OpenMotor();
 
-					}else{
-					// OpenMotor();
+			// 		}else{
+			// 		// OpenMotor();
 
-					OpenMobil()
+			// 		OpenMobil()
 					
-					}
-			}
-                });
+			// 		}
+			// }
+            //     });
 }
 	 $(function () {
     //Initialize Select2 Elements
