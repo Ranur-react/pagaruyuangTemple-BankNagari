@@ -95,7 +95,22 @@
 											<th class="text-center">Aksi</th>
 										</tr>
 									</thead>
-									<tbody></tbody>
+									<td><?= $data['jenis_kendaraan']; ?></td>
+									<td><?= $data['harga_bayar']; ?></td>
+									<td><?= $data['jumlah_kendaraan']; ?></td>
+									<td><?= $data['jumlah_transakasi']; ?></td>
+									<tbody>
+										<?php
+										$n = 0;
+										foreach ($exitoneday as $data) {
+											$n++;
+										?>
+
+										<?php
+										}
+										?>
+
+									</tbody>
 									<tfoot>
 										<tr>
 											<td colspan="2">Total</td>

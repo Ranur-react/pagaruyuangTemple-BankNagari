@@ -24,6 +24,7 @@ class ParkirKeluar extends CI_Controller
 			'urls'  => '<li class="active">Parkir report</li>',
 			'entry'  => $this->Mentry->getall(),
 			'exitoneday'  => $this->MlapParkirKeluar->getallOneDay(),
+			'exitGroubDay'  => $this->MlapParkirKeluar->getGroubOneDay(),
 			'signatureKey'  => $strurl['value'],
 		];
 		$this->template->display('gate/parkirlaporan/index', $data);
