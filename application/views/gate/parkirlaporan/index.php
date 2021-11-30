@@ -108,7 +108,7 @@
 										?>
 											<tr>
 												<td><?= $data['jenis_kendaraan']; ?></td>
-												<td><?= $data['harga_bayar']; ?></td>
+												<td><?=  'Rp. ' . rupiah($data['harga_bayar']); ?></td>
 												<td><?= $data['jumlah_kendaraan']; ?></td>
 												<td><?= 'Rp. ' . rupiah($data['jumlah_transakasi']); ?></td>
 											</tr>
@@ -175,7 +175,7 @@
 											<td><?= $data['noplat']; ?></td>
 											<td><?= $data['id_Entry']; ?></td>
 											<td><?= $data['jenis_kendaraan']; ?></td>
-											<td><?= $data['harga_bayar']; ?></td>
+											<td><?=  'Rp. ' . rupiah($data['harga_bayar']); ?></td>
 											<td><?= $data['date_exit']; ?></td>
 											<td><?= $data['jenis_bayar']; ?></td>
 											<td><?= $data['keterangan']; ?></td>
