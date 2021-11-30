@@ -152,7 +152,7 @@
 										<tr>
 											<td><?= $n; ?> .</td>
 											<td><?= $data['noplat']; ?></td>
-											<td><?= $data['id_entry']; ?></td>
+											<td><?= $data['id_Entry']; ?></td>
 											<td><?= $data['jenis_kendaraan']; ?></td>
 											<td><?= $data['harga_bayar']; ?></td>
 											<td><?= $data['date_exit']; ?></td>
