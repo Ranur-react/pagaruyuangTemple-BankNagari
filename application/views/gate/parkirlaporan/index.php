@@ -99,8 +99,12 @@
 									<tbody>
 										<?php
 										$n = 0;
+										$totalkendaran = 0;
+										$totaltrx = 0;
 										foreach ($exitGroubDay as $data) {
 											$n++;
+											$totalkendaran += $data['jumlah_kendaraan'];
+											$totaltrx += $data['jumlah_transakasi'];
 										?>
 											<tr>
 												<td><?= $data['jenis_kendaraan']; ?></td>
@@ -116,8 +120,8 @@
 									<tfoot>
 										<tr>
 											<td colspan="2">Total</td>
-											<td>0</td>
-											<td>0</td>
+											<td><?= $totalkendaran; ?></td>
+											<td><?= $totaltrx; ?></td>
 											<td></td>
 
 										</tr>
