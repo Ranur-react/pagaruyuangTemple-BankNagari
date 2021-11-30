@@ -147,7 +147,7 @@
 					<div class="col-xs-12">
 						<div class="box box-warning">
 							<div class="box-header with-border">
-								<button class="btn bg-olive cetakinikeluar"><i class="icon-printer"></i> Cetak</button>
+								<!-- <button class="btn bg-olive cetakinikeluar"><i class="icon-printer"></i> Cetak</button> -->
 							</div>
 							<table class="table table-bordered table-striped data-tabel">
 								<thead>
