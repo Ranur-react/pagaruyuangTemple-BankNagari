@@ -110,7 +110,7 @@
 												<td><?= $data['jenis_kendaraan']; ?></td>
 												<td><?= $data['harga_bayar']; ?></td>
 												<td><?= $data['jumlah_kendaraan']; ?></td>
-												<td><?= $data['jumlah_transakasi']; ?></td>
+												<td><?= 'Rp. ' . rupiah($data['jumlah_transakasi']); ?></td>
 											</tr>
 										<?php
 										}
@@ -121,7 +121,7 @@
 										<tr>
 											<th colspan="2">Total</th>
 											<th><?= $totalkendaran; ?></th>
-											<th><?= $totaltrx; ?></th>
+											<th><?= 'Rp. '.rupiah($totaltrx); ?></th>
 											<th></th>
 
 										</tr>
