@@ -119,10 +119,10 @@
 									</tbody>
 									<tfoot>
 										<tr>
-											<td colspan="2">Total</td>
-											<td><?= $totalkendaran; ?></td>
-											<td><?= $totaltrx; ?></td>
-											<td></td>
+											<th colspan="2">Total</th>
+											<th><?= $totalkendaran; ?></th>
+											<th><?= $totaltrx; ?></th>
+											<th></th>
 
 										</tr>
 									</tfoot>
