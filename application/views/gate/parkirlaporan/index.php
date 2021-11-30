@@ -179,21 +179,19 @@
 							<div class="box-header with-border">
 								<!-- <button class="btn bg-olive cetakinikeluar"><i class="icon-printer"></i> Cetak</button> -->
 							</div>
-
-							<table class="table table-bordered table-striped data-tabel">
-								<thead>
-									<tr>
-										<th>Jenis Kendaraan</th>
-										<th>Tarif</th>
-										<th>Jumlah Kendaraan</th>
-										<th>Jumlah Transaksi</th>
-										<th class="text-center">Aksi</th>
-									</tr>
-								</thead>
-								<div class="isiTabel">
-
-								</div>
-							</table>
+							<div class="isiTabel">
+								<table class="table table-bordered table-striped data-tabel">
+									<thead>
+										<tr>
+											<th>Jenis Kendaraan</th>
+											<th>Tarif</th>
+											<th>Jumlah Kendaraan</th>
+											<th>Jumlah Transaksi</th>
+											<th class="text-center">Aksi</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
 
 
 

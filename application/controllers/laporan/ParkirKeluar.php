@@ -34,9 +34,9 @@ class ParkirKeluar extends CI_Controller
 	public function TabelPeriode()
 	{
 		$param = $this->input->post(null, TRUE);
-		$data['$exitGroup'] = $this->MlapParkirKeluar->getGroub($param);
+		$data['exitGroup'] = $this->MlapParkirKeluar->getGroub($param);
 
-		$this->load->view('Absens/parkirlaporan/tabel', $data);
+		$this->load->view('gate/parkirlaporan/tabel', $data);
 	}
 	
 }
