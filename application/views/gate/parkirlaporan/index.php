@@ -95,17 +95,19 @@
 											<th class="text-center">Aksi</th>
 										</tr>
 									</thead>
-									<td><?= $data['jenis_kendaraan']; ?></td>
-									<td><?= $data['harga_bayar']; ?></td>
-									<td><?= $data['jumlah_kendaraan']; ?></td>
-									<td><?= $data['jumlah_transakasi']; ?></td>
+
 									<tbody>
 										<?php
 										$n = 0;
-										foreach ($exitoneday as $data) {
+										foreach ($exitGroubDay as $data) {
 											$n++;
 										?>
-
+											<tr>
+												<td><?= $data['jenis_kendaraan']; ?></td>
+												<td><?= $data['harga_bayar']; ?></td>
+												<td><?= $data['jumlah_kendaraan']; ?></td>
+												<td><?= $data['jumlah_transakasi']; ?></td>
+											</tr>
 										<?php
 										}
 										?>

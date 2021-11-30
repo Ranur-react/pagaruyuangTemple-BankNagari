@@ -13,6 +13,6 @@ class MlapParkirKeluar extends CI_Model
 	{
 		$dateNow = date("Y-m-d");
 
-		return $this->db->query("SELECT jenis_kendaraan, harga_bayar,COUNT(*) AS jumlah_kendaraan, SUM(harga_bayar) AS jumlah_transakasi FROM tb_exit BETWEEN '$dateNow 00:00:01.000' AND '$dateNow 23:59:00.000' GROUP BY jenis_kendaraan;")->result_array();
+		return $this->db->query("SELECT jenis_kendaraan, harga_bayar,COUNT(*) AS jumlah_kendaraan, SUM(harga_bayar) AS jumlah_transakasi FROM tb_exit WHERE  date_exit BETWEEN '$dateNow 00:00:01.000' AND '$dateNow 23:59:00.000' GROUP BY jenis_kendaraan;")->result_array();
 	}
 }
