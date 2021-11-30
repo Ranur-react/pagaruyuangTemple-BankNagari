@@ -92,7 +92,7 @@
 											<th>Tarif</th>
 											<th>Jumlah Kendaraan</th>
 											<th>Jumlah Transaksi</th>
-											<!-- <th class="text-center">Aksi</th> -->
+											<th class="text-center">Aksi</th>
 										</tr>
 									</thead>
 									<tbody></tbody>
@@ -158,6 +158,7 @@
 											<td><?= $data['date_exit']; ?></td>
 											<td><?= $data['jenis_bayar']; ?></td>
 											<td><?= $data['keterangan']; ?></td>
+											<!-- <td><?= $data['keterangan']; ?></td> -->
 										</tr>
 									<?php
 									}
