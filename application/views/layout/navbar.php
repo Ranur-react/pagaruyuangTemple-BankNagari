@@ -1,10 +1,10 @@
 <?php $urls = $this->uri->segment(1) ?>
 <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
 	<ul class="nav navbar-nav">
-		<li class="<?= $urls == "welcome" ? "active" : null ?>"><a href="<?= site_url('welcome') ?>"><i class="icon-home4"></i> Home</a></li>
+		<!-- <li class="<?= $urls == "welcome" ? "active" : null ?>"><a href="<?= site_url('welcome') ?>"><i class="icon-home4"></i> Home</a></li> -->
 
 		<?php if (level() == 1) { ?>
-			<li class="<?= $urls == "tiket" ? "active" : null ?>"><a href="<?= site_url('tiket') ?>"><i class="fa fa-qrcode"></i> Tiket Masuk</a></li>
+			<li class="<?= $urls == "parkir" ? "active" : null ?>"><a href="<?= site_url('parkir') ?>"><i class="fa fa-car"></i> Kasir Parkir</a></li>
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-archive"></i> PARKIR<span class="caret"></span></a>
 				<ul class="dropdown-menu" role="menu">

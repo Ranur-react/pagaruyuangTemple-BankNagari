@@ -92,7 +92,7 @@
 											<th>Tarif</th>
 											<th>Jumlah Kendaraan</th>
 											<th>Jumlah Transaksi</th>
-											<th class="text-center">Aksi</th>
+											<!-- <th class="text-center">Aksi</th> -->
 										</tr>
 									</thead>
 									<tbody></tbody>
@@ -139,7 +139,7 @@
 										<th>Jam Masuk</th>
 										<th>Metode Bayar</th>
 										<th>Keterangan</th>
-										<th class="text-center">Aksi</th>
+										<!-- <th class="text-center">Aksi</th> -->
 									</tr>
 								</thead>
 								<tbody>
