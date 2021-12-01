@@ -10,7 +10,7 @@
 				<ul class="dropdown-menu" role="menu">
 					<li><a href="<?= site_url('LaporanKini') ?>">List Kendaraan Keluar</a></li>
 
-					<li><a href="#">Lits Kendaraan Masuk</a></li>
+					<li><a href="<?= site_url('LaporanMasuk')?>">Lits Kendaraan Masuk</a></li>
 				</ul>
 			</li>
 		<?php } else if (level() == 2) { ?>

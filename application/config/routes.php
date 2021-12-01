@@ -26,6 +26,7 @@ $route['qrisapiGetstatus'] = 'gate/Parkir/GET_QRIS';
 $route['bayar'] = 'gate/Parkir/bayar';
 
 $route['LaporanKini'] = 'laporan/ParkirKeluar';
+$route['LaporanMasuk'] = 'laporan/ParkirMasuk';
 
 $route['Print'] = 'gate/PrintESC';
 

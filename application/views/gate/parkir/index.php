@@ -322,30 +322,30 @@ function OpenMotor() {
                 });
 }
 function printStruk() {
-
-	        //       $.ajax({
-            //         url: 'http://localhost/Web-Services/Print',
-            //         data: {jsonData: JSON.stringify(database)},
-            //         type: "post",
-			//         dataType: "json",
-            //         cache: false,
-            //         success: function(response) {
-            //         	alert
-            //         },
-            //         complete:function(response) {
-			// 			console.log("Cetak Struk Selesai..YY...");	
+console.log("Printing conditions Call . . . . . .");
+	              $.ajax({
+                    url: 'http://localhost/Web-Services/Print',
+                    data: {jsonData: JSON.stringify(database)},
+                    type: "post",
+			        dataType: "json",
+                    cache: false,
+                    success: function(response) {
+                    	alert
+                    },
+                    complete:function(response) {
+						console.log("Cetak Struk Selesai..YY...");	
 					if (database['jenis']=='roda2') {
 			
 					OpenMotor();
 
 					}else{
-					// OpenMotor();
+					OpenMotor();
 
 					OpenMobil()
 					
 					}
-			// }
-            //     });
+			}
+                });
 }
 	 $(function () {
     //Initialize Select2 Elements
