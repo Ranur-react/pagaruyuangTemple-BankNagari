@@ -114,7 +114,7 @@
 									</tbody>
 									<tfoot>
 										<tr>
-											<th colspan="2">Total</th>
+											<th colspan="1">Total</th>
 											<th><?= $totalkendaran; ?></th>
 											<th></th>
 
