@@ -21,10 +21,13 @@ class ParkirMasuk extends CI_Controller
 		$data = [
 			'title' => 'laporan Kendaraan Masuk hari ini',
 			'page'  => 'Laporan Parkir Masuk Hari ini',
+			'pageSecond' => 'Laporan Sisa Kendaraan Parkir Masuk ',
 			'small' => 'laporan Kasir Parkir',
 			'secontitle' => 'Laporan Per Tanggal',
 			'urls'  => '<li class="active">Parkir report</li>',
 			'EntryGroubDay'  => $this->MlapParkirmasuk->getGroubOneDay(),
+			'EntryGroubDaySisa'  => $this->MlapParkirmasuk->getGroubOneDaySisa(),
+			
 			'signatureKey'  => $strurl['value'],
 		];
 		$this->template->display('gate/parkirMasuklaporan/index', $data);
